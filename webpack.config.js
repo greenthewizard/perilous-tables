@@ -11,13 +11,17 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			hash: true,
-			template: 'src/index.html'
+			template: 'src/index.pug'
 		})
 	],
 	module: {
 		rules: [
 			{
-				test:/\.scss$/,
+				test:/\.pug$/,
+				use: 'pug-loader'
+			},
+			{
+				test:/\.s?css$/,
 				use: [
 					{ loader: 'style-loader' },
 					{ loader: 'css-loader' },
