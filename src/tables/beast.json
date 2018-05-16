@@ -1,4 +1,21 @@
 {
+    "base": {
+        "name": "Beast",
+        "options": [
+            {
+                "result": "tbl:beasts[earthbound]",
+                "weight": 7
+            },
+            {
+                "result": "tbl:beasts[airborne]",
+                "weight": 3
+            },
+            {
+                "result": "tbl:beasts[watergoing]",
+                "weight": 2
+            }
+        ]
+    },
     "earthbound": {
         "name": "Earthbound Beast",
         "options": [

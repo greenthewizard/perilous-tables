@@ -36,11 +36,17 @@ const getWeightedList = (options) => {
 
 const tableProto = {};
 
-tableProto.roll = function() {
+tableProto.roll = function(times = 0) {
     const rolled = this.options[randInt(this.options.length - 1)];
     if (isTableRef(rolled)) {
         const {path, key} = parseTableRef(rolled);
-        return newTable(path, key);
+
+        if (times === 0) {
+            return newTable(path, key);
+        } else {
+            return newTable(path, key).then(res => res.roll(times - 1));
+        }
+        return once ? newTable(path, key) : newTable(path, key).then(res => res.roll(once));
     } else {
         this.result = rolled;
         this.resolved = true;
