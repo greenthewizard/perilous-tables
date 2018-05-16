@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -12,7 +13,10 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			hash: true,
 			template: 'src/index.pug'
-		})
+		}),
+		new CopyWebpackPlugin([
+			{from: 'src/tables', to: 'tables'}
+		])
 	],
 	module: {
 		rules: [
