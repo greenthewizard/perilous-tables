@@ -1,5 +1,6 @@
 const tableData = {};
 const dir = 'tables/'
+const re = /tbl:.+?\[.+?\]/g
 
 const randInt = (max) => {
     return Math.floor(Math.random() * Math.floor(max + 1));
@@ -12,6 +13,36 @@ const parseTableRef = (ref) => {
     return {
         path,
         key
+    }
+}
+
+const parseTableResult = (str) => {
+    const newTables = [];
+    let match = [];
+    re.lastIndex = 0;
+    while (match = re.exec(str)) {
+        newTables.push(newTable(match[0]))
+    }
+
+    return Promise.all(newTables)
+    .then(tables => {
+        return tables.map(tbl => tbl.roll());
+    })
+    .then(tables => {
+        return str.replace(re, match => {
+            return tables.shift().result;
+        });
+    });
+}
+
+const resolveString = (str) => {
+    if (re.test(str)) {
+        return parseTableResult(str)
+        .then(newStr => resolveString(newStr));
+    } else {
+        return new Promise((resolve, reject) => {
+            resolve(str);
+        });
     }
 }
 
@@ -29,7 +60,7 @@ const getWeightedList = (options) => {
         } else {
             acc.push(option);
         }
-
+        
         return acc;
     }, []);
 }
@@ -39,23 +70,19 @@ let i = 0;
 
 tableProto.roll = function() {
     const rolled = this.options[randInt(this.options.length - 1)];
-    if (isTableRef(rolled)) {
-        const {path, key} = parseTableRef(rolled);
-        return newTable(path, key).then(tableObj => tableObj.roll());
-    } else {
-        this.result = rolled;
-        return this;
-    }
+    this.result = rolled;
+    return this;
 }
 
 tableProto.getOptions = function() {
     return this.options;
 }
 
-const newTable = (path, key) => {
+const newTable = (ref) => {
+    const {path, key} = parseTableRef(ref);
     const tableObj = Object.create(tableProto);
     tableObj.result = null;
-
+    
     if (!tableData[path]) {
         return fetch(dir + path + '.json')
         .then(res => res.json())
@@ -77,9 +104,17 @@ const newTable = (path, key) => {
 }
 
 const table = (ref) => {
-    const {path, key} = parseTableRef(ref);
-    return newTable(path, key);
+    return newTable(ref);
 } 
+
+resolveString("tbl:creature/beast[earthbound] PLUS tbl:creature/beast[airborne]")
+.then(res => console.log(res));
+
+resolveString("Thing that flies: tbl:creature/beast[airborne].")
+.then(res => console.log(res));
+
+resolveString("NEW BEAST: tbl:creature/beast[base].")
+.then(res => console.log(res));
 
 export default {
     table
