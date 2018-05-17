@@ -1,7 +1,7 @@
 import './js/styles.js';
 import perilous from './js/perilous.js'
 
-perilous.table('tbl:creature/beast[earthbound]')
+perilous.table('tbl:creature/creature[base]')
 .then(res => res.roll(-1))
 .then(res => {
     const $p = document.createElement('p');
