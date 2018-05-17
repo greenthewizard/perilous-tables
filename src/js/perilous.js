@@ -16,7 +16,7 @@ const parseTableRef = (ref) => {
 }
 
 const isTableRef = (str) => {
-    return /tbl:.+\[.+\]/.test(str);
+    return /^tbl:.+\[.+\]$/.test(str);
 }
 
 const getWeightedList = (options) => {
@@ -46,10 +46,8 @@ tableProto.roll = function(times = 0) {
         } else {
             return newTable(path, key).then(res => res.roll(times - 1));
         }
-        return once ? newTable(path, key) : newTable(path, key).then(res => res.roll(once));
     } else {
         this.result = rolled;
-        this.resolved = true;
         return this;
     }
 }
@@ -61,7 +59,6 @@ tableProto.getOptions = function() {
 const newTable = (path, key) => {
     const tableObj = Object.create(tableProto);
     tableObj.result = null;
-    tableObj.resolved = false;
 
     if (!tableData[path]) {
         return fetch(dir + path + '.json')
@@ -83,13 +80,11 @@ const newTable = (path, key) => {
     }
 }
 
-export default {
-    table: (ref) => {
-        const {path, key} = parseTableRef(ref);
-        const load = () => newTable(path, key);
-    
-        return {
-            load
-        }
-    }
+const table = (ref) => {
+    const {path, key} = parseTableRef(ref);
+    return newTable(path, key);
 } 
+
+export default {
+    table
+}

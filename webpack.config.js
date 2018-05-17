@@ -12,6 +12,7 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			hash: true,
+			inject: true,
 			template: 'src/index.pug'
 		}),
 		new CopyWebpackPlugin([

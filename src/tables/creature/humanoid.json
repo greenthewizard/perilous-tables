@@ -1,0 +1,51 @@
+{
+    "base": {
+            "name": "Humanoid",
+            "options": [
+                {
+                    "result": "tbl:creature/humanoid[common]",
+                    "weight": 7
+                },
+                {
+                    "result": "tbl:creature/humanoid[uncommon]",
+                    "weight": 3
+                },
+                {
+                    "result": "tbl:creature/humanoid[hybrid]",
+                    "weight": 2
+                }
+            ]
+        },
+    "common": {
+        "name": "Common Humanoid",
+        "options": [
+            "halfling",
+            "goblin/kobold",
+            "dwarf/gnome",
+            "orc/hobgoblin/gnoll",
+            "half-elf/half-orc, etc.",
+            "elf"
+        ]
+    },
+    "uncommon": {
+        "name": "Uncommon Humanoid",
+        "options": [
+            "fey",
+            "catfolk/dogfolk",
+            "lizardfolk/merfolk",
+            "birdfolk",
+            "ogre/troll",
+            "cyclops/giant"
+        ]
+    },
+    "hybrid": {
+        "name": "Hybrid Humanoid",
+        "options": [
+            "centaur",
+            "werewolf/werebear",
+            "werecreature (human + tbl:creature/beast[base])",
+            "human + tbl:creature/beast[base]",
+            "human + tbl:creature/beast[base] + tbl:creature/beast[base]"
+        ]
+    }
+}

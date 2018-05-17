@@ -3,15 +3,15 @@
         "name": "Beast",
         "options": [
             {
-                "result": "tbl:beasts[earthbound]",
+                "result": "tbl:creature/beast[earthbound]",
                 "weight": 7
             },
             {
-                "result": "tbl:beasts[airborne]",
+                "result": "tbl:creature/beast[airborne]",
                 "weight": 3
             },
             {
-                "result": "tbl:beasts[watergoing]",
+                "result": "tbl:creature/beast[watergoing]",
                 "weight": 2
             }
         ]
