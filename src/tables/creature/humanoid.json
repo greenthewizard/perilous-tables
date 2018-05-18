@@ -19,11 +19,26 @@
     "common": {
         "name": "Common Humanoid",
         "options": [
-            "halfling",
-            "goblin/kobold",
-            "dwarf/gnome",
-            "orc/hobgoblin/gnoll",
-            "half-elf/half-orc, etc.",
+            {
+                "result": "halfling",
+                "weight": 3
+            },
+            {
+                "result": "goblin/kobold",
+                "weight": 2
+            },
+            {
+                "result": "dwarf/gnome",
+                "weight": 2
+            },
+            {
+                "result": "orc/hobgoblin/gnoll",
+                "weight": 2
+            },
+            {
+                "result": "half-elf/half-orc, etc.",
+                "weight": 2
+            },
             "elf"
         ]
     },
@@ -31,21 +46,45 @@
         "name": "Uncommon Humanoid",
         "options": [
             "fey",
-            "catfolk/dogfolk",
-            "lizardfolk/merfolk",
+            {
+                "result": "catfolk/dogfolk",
+                "weight": 2
+            },
+            {
+                "result": "lizardfolk/merfolk",
+                "weight": 3
+            },
             "birdfolk",
-            "ogre/troll",
-            "cyclops/giant"
+            {
+                "result": "ogre/troll",
+                "weight": 3
+            },
+            {
+                "result": "cyclops/giant",
+                "weight": 2
+            }
         ]
     },
     "hybrid": {
         "name": "Hybrid Humanoid",
         "options": [
-            "centaur",
-            "werewolf/werebear",
+            {
+                "result": "centaur",
+                "weight": 2
+            },
+            {
+                "result": "werewolf/werebear",
+                "weight": 3
+            },
             "werecreature (human + tbl:creature/beast[base])",
-            "human + tbl:creature/beast[base]",
-            "human + tbl:creature/beast[base] + tbl:creature/beast[base]"
+            {
+                "result": "human + tbl:creature/beast[base]",
+                "weight": 4
+            },
+            {
+                "result": "human + tbl:creature/beast[base] + tbl:creature/beast[base]",
+                "weight": 2
+            }
         ]
     }
 }

@@ -19,12 +19,27 @@
     "unusual": {
         "name": "Unusual Monster",
         "options": [
-            "plant/fungus",
-            "Undead Human",
+            {
+                "result": "plant/fungus",
+                "weight": 3
+            },
+            {
+                "result": "Undead Human",
+                "weight": 2
+            },
             "Undead tbl:creature/humanoid[base]",
-            "tbl:creature/beast[base] + tbl:creature/beast[base]",
-            "tbl:creature/beast[base] + tbl:detail[ability]",
-            "tbl:creature/beast[base] + tbl:detail[feature]"
+            {
+                "result": "tbl:creature/beast[base] + tbl:creature/beast[base]",
+                "weight": 2
+            },
+            {
+                "result": "tbl:creature/beast[base] + tbl:detail[ability]",
+                "weight": 2
+            },
+            {
+                "result": "tbl:creature/beast[base] + tbl:detail[feature]",
+                "weight": 2
+            }
         ]
     },
     "rare": {
@@ -39,9 +54,18 @@
     "legendary": {
         "name": "Legendary Monster",
         "options": [
-            "dragon/collossus",
-            "tbl:creature/monster[unusual] + Huge",
-            "tbl:creature/monster[rare] + Huge",
+            {
+                "result": "dragon/collossus",
+                "weight": 3
+            },
+            {
+                "result": "tbl:creature/monster[unusual] + Huge",
+                "weight": 3
+            },
+            {
+                "result": "tbl:creature/monster[rare] + Huge",
+                "weight": 3
+            },
             "tbl:creature/beast[base] + dragon",
             "tbl:creature/monster[unusual] + dragon",
             "tbl:creature/monster[rare] + dragon"
