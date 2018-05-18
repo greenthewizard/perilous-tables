@@ -21,7 +21,7 @@
         "options": [
             "plant/fungus",
             "Undead Human",
-            "Undead tbl:humanoid[base]",
+            "Undead tbl:creature/humanoid[base]",
             "tbl:creature/beast[base] + tbl:creature/beast[base]",
             "tbl:creature/beast[base] + tbl:detail[ability]",
             "tbl:creature/beast[base] + tbl:detail[feature]"

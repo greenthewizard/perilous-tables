@@ -1,12 +1,15 @@
 import './js/styles.js';
 import perilous from './js/perilous.js'
 
-// perilous.table('tbl:creature/creature[base]')
-// .then(res => res.roll(-1))
-// .then(res => {
-//     const $p = document.createElement('p');
-//     $p.textContent = res.result;
+const appendTable = () => {
+    perilous.table('tbl:creature/creature[base]')
+    .then(res => {
+        const $p = document.createElement('p');
+        $p.textContent = res;
+    
+        document.querySelector('#roll-div')
+        .appendChild($p);
+    });
+}
 
-//     document.querySelector('#roll-div')
-//     .appendChild($p);
-// });
+setInterval(appendTable, 100);

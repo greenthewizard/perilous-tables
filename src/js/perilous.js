@@ -23,7 +23,7 @@ const parseTableResult = (str) => {
     while (match = re.exec(str)) {
         newTables.push(newTable(match[0]))
     }
-
+    
     return Promise.all(newTables)
     .then(tables => {
         return tables.map(tbl => tbl.roll());
@@ -36,14 +36,13 @@ const parseTableResult = (str) => {
 }
 
 const resolveString = (str) => {
-    if (re.test(str)) {
-        return parseTableResult(str)
-        .then(newStr => resolveString(newStr));
-    } else {
-        return new Promise((resolve, reject) => {
-            resolve(str);
-        });
-    }
+    return parseTableResult(str)
+    .then(newStr => {
+        if(re.test(newStr)) {
+            return resolveString(newStr);
+        }
+        return newStr;
+    });
 }
 
 const isTableRef = (str) => {
@@ -83,7 +82,14 @@ const newTable = (ref) => {
     const tableObj = Object.create(tableProto);
     tableObj.result = null;
     
-    if (!tableData[path]) {
+    if (tableData[path]) {
+        return new Promise((resolve) => {
+            tableObj.options = getWeightedList(
+                tableData[path][key].options
+            );
+            resolve(tableObj);
+        });
+    } else {
         return fetch(dir + path + '.json')
         .then(res => res.json())
         .then(res => {
@@ -93,28 +99,12 @@ const newTable = (ref) => {
             );
             return tableObj;
         });
-    } else {
-        return new Promise((resolve, reject) => {
-            tableObj.options = getWeightedList(
-                tableData[path][key].options
-            );
-            return tableObj;
-        });
     }
 }
 
-const table = (ref) => {
-    return newTable(ref);
+const table = (str) => {
+    return resolveString(str);
 } 
-
-resolveString("tbl:creature/beast[earthbound] PLUS tbl:creature/beast[airborne]")
-.then(res => console.log(res));
-
-resolveString("Thing that flies: tbl:creature/beast[airborne].")
-.then(res => console.log(res));
-
-resolveString("NEW BEAST: tbl:creature/beast[base].")
-.then(res => console.log(res));
 
 export default {
     table
