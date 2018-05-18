@@ -2,5 +2,20 @@ include templates/header
 
 #container
   h1 Perilous Tables
-  #roll-div
-    p Rolling..
+  #monster-gen
+    input#btn--gen(
+      type="button"
+      value="Generate Monster"
+    )
+    p#creature Creature: 
+      span.table
+    p#activity Activity: 
+      span.table
+    p#alignment Alignment:
+      span.table
+    p#disposition Disposition:
+      span.table
+    p#no-appearing No. Appearing:
+      span.table
+    p#size Size:
+      span.table
