@@ -80,26 +80,26 @@ tableProto.getOptions = function() {
 const newTable = (ref) => {
     const {path, key} = parseTableRef(ref);
     const tableObj = Object.create(tableProto);
-    tableObj.result = null;
+    let tableJSON = null;
     
     if (tableData[path]) {
-        return new Promise((resolve) => {
-            tableObj.options = getWeightedList(
-                tableData[path][key].options
-            );
-            resolve(tableObj);
-        });
+        tableJSON = Promise.resolve(tableData[path]);
     } else {
-        return fetch(dir + path + '.json')
+        tableJSON = fetch(dir + path + '.json')
         .then(res => res.json())
         .then(res => {
             tableData[path] = res;
-            tableObj.options = getWeightedList(
-                tableData[path][key].options
-            );
-            return tableObj;
+            return res;
         });
     }
+    
+    return tableJSON.then(tableJSON => {
+        tableObj.result = null;
+        tableObj.options = getWeightedList(
+            tableJSON[key].options
+        );
+        return tableObj;
+    });
 }
 
 const table = (str) => {
