@@ -1,5 +1,5 @@
 import './js/styles.js';
-import perilous from './js/perilous.js'
+import perilous from './js/perilous/perilous.js'
 
 document.addEventListener("DOMContentLoaded", function() {
     const $btn = document.querySelector('#btn--gen');

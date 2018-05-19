@@ -1,6 +1,6 @@
+const tableProto = {};
 const tableData = {};
 const dir = 'tables/'
-const re = /tbl:.+?\[.+?\]/g
 
 const randInt = (max) => {
     return Math.floor(Math.random() * Math.floor(max + 1));
@@ -14,39 +14,6 @@ const parseTableRef = (ref) => {
         path,
         key
     }
-}
-
-const parseTableResult = (str) => {
-    const newTables = [];
-    let match = [];
-    re.lastIndex = 0;
-    while (match = re.exec(str)) {
-        newTables.push(newTable(match[0]))
-    }
-    
-    return Promise.all(newTables)
-    .then(tables => {
-        return tables.map(tbl => tbl.roll());
-    })
-    .then(tables => {
-        return str.replace(re, match => {
-            return tables.shift().result;
-        });
-    });
-}
-
-const resolveString = (str) => {
-    return parseTableResult(str)
-    .then(newStr => {
-        if(re.test(newStr)) {
-            return resolveString(newStr);
-        }
-        return newStr;
-    });
-}
-
-const isTableRef = (str) => {
-    return /^tbl:.+\[.+\]$/.test(str);
 }
 
 const getWeightedList = (options) => {
@@ -63,9 +30,6 @@ const getWeightedList = (options) => {
         return acc;
     }, []);
 }
-
-const tableProto = {};
-let i = 0;
 
 tableProto.roll = function() {
     const rolled = this.options[randInt(this.options.length - 1)];
@@ -102,10 +66,6 @@ const newTable = (ref) => {
     });
 }
 
-const table = (str) => {
-    return resolveString(str);
-} 
-
-export default {
-    table
+export {
+    newTable
 }
