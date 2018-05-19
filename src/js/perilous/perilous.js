@@ -1,33 +1,23 @@
 import * as tableFactory from './tableFactory.js';
 
-const re = /tbl:.+?\[.+?\]/g
-
-const parseTableResult = (str) => {
-    const newTables = [];
-    let match = [];
-    re.lastIndex = 0;
-    while (match = re.exec(str)) {
-        newTables.push(tableFactory.newTable(match[0]))
-    }
-    
-    return Promise.all(newTables)
-    .then(tables => {
-        return tables.map(tbl => tbl.roll());
-    })
-    .then(tables => {
-        return str.replace(re, match => {
-            return tables.shift().result;
-        });
-    });
-}
+const tblRefRegEx = /tbl:.+?\[.+?\]/g
 
 const resolveString = (str) => {
-    return parseTableResult(str)
+    const newTables = [];
+    let match = [];
+
+    tblRefRegEx.lastIndex = 0;
+    while (match = tblRefRegEx.exec(str)) {
+        newTables.push(tableFactory.newTable(match[0]))
+    }
+
+    return Promise.all(newTables)
+    .then(tbls => tbls.map(tbl => tbl.roll()))
+    .then(tbls => str.replace(tblRefRegEx, _ => tbls.shift().result))
     .then(newStr => {
-        if(re.test(newStr)) {
-            return resolveString(newStr);
-        }
-        return newStr;
+        return tblRefRegEx.test(newStr)
+            ? resolveString(newStr) 
+            : Promise.resolve(newStr);
     });
 }
 
