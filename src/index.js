@@ -1,38 +1,39 @@
 import './js/styles.js';
 import perilous from './js/perilous/perilous.js'
 
+const tblRefs = [
+    'tbl:creature/creature[base]',
+    'tbl:detail[activity]',
+    'tbl:detail[disposition]',
+    'tbl:detail[no. appearing]',
+    'tbl:detail[size]'
+]
+
 document.addEventListener("DOMContentLoaded", function() {
+    const $monsterGen = document.querySelector('#monster-gen');
     const $btn = document.querySelector('#btn--gen');
     $btn.addEventListener('click', (e) => {
-        perilous.table('tbl:creature/creature[base]')
-        .then(res => {
-            document.querySelector('#creature .table')
-            .textContent = res;
-        });
-        perilous.table('tbl:detail[activity]')
-        .then(res => {
-            document.querySelector('#activity .table')
-            .textContent = res;
-        });
-        perilous.table('tbl:detail[alignment]')
-        .then(res => {
-            document.querySelector('#alignment .table')
-            .textContent = res;
-        });
-        perilous.table('tbl:detail[disposition]')
-        .then(res => {
-            document.querySelector('#disposition .table')
-            .textContent = res;
-        });
-        perilous.table('tbl:detail[no. appearing]')
-        .then(res => {
-            document.querySelector('#no-appearing .table')
-            .textContent = res;
-        });
-        perilous.table('tbl:detail[size]')
-        .then(res => {
-            document.querySelector('#size .table')
-            .textContent = res;
+        const tblList = tblRefs.map(ref => perilous.table(ref));
+        while ($monsterGen.firstChild) {
+            $monsterGen.removeChild($monsterGen.firstChild);
+        }
+        Promise.all(tblList)
+        .then(tblList => tblList.map(tbl => tbl.roll()))
+        .then(tblList => {
+            tblList.forEach(tbl => {
+                const $p = document.createElement('p');
+                const $tblName = document.createElement('span');
+                const $result = document.createElement('span');
+
+                $tblName.textContent = tbl.tableName + ': ';
+                perilous.resolveString(tbl.result)
+                .then(res => $result.textContent = res); 
+
+                $p.appendChild($tblName);
+                $p.appendChild($result);
+
+                $monsterGen.appendChild($p);
+            });
         });
     });
 });

@@ -21,11 +21,11 @@ const resolveString = (str) => {
     });
 }
 
-//Public API
-const table = (str) => {
-    return resolveString(str);
-} 
+const table = (ref) => {
+    return tableFactory.newTable(ref);
+}
 
 export default {
-    table
+    table,
+    resolveString
 }

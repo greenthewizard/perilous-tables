@@ -59,6 +59,7 @@ const newTable = (ref) => {
     
     return tableJSON.then(tableJSON => {
         tableObj.result = null;
+        tableObj.tableName = tableJSON[key].name || key;
         tableObj.options = getWeightedList(
             tableJSON[key].options
         );
