@@ -1,9 +1,46 @@
 @import 'base'
 @import url('https://fonts.googleapis.com/css?family=Roboto')
 
+$darkblue: #284B63
+$lightblue: #34A4D3
+$grey: #353535
+$lightgrey: #D9D9D9
+$white: #EEE
+
 body
     font-family: 'Roboto', sans-serif
+    color: $grey
 
 #container 
     width: 80vw
     margin: 3rem auto
+
+.btn-group
+    padding: .4rem 0
+
+.list-container
+    width: 15rem
+
+.btn-list
+    li
+        padding: 0 0 .4rem 0
+    input
+        width: 100%
+
+.btn
+    border: 2px solid $lightblue
+    border-radius: 8px
+    background: transparent
+    padding: 1rem
+    font-size: 1.7rem
+
+.btn:hover 
+    border-color: $darkblue
+
+.btn:active
+    background-color: $lightblue
+    border-color: $lightblue
+
+.btn--selected
+    background-color: $lightblue
+    color: $white

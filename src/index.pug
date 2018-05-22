@@ -2,9 +2,21 @@ include templates/header
 
 #container
   h1 Perilous Tables
-  input#btn--gen(
-    type="button"
-    value="Generate Monster"
-  )
-  #monster-gen
+  .btn-group
+    input.btn(
+        type="button"
+        value="Generate NPC"
+      )
+  .list-container
+    ul.btn-list
+      li
+        input.btn(
+          type="button"
+          value="Activity"
+        )
+      li
+        input.btn.btn--selected(
+          type="button"
+          value="Disposition"
+        )
     
