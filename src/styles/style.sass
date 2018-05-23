@@ -11,15 +11,32 @@ body
     font-family: 'Roboto', sans-serif
     color: $grey
 
-#container 
+.grid-container 
     width: 80vw
+    max-width: 90rem
     margin: 3rem auto
+
+    h1
+        padding: 1rem 0
+
+.box 
+    border: 1px solid black
+    border-radius: 8px
+    padding: 1rem
+    h2 
+        padding-bottom: 2rem
+
+.box:after
+    content: ""
+    display: table
+    clear: both
 
 .btn-group
     padding: .4rem 0
 
 .list-container
-    width: 15rem
+    width: 60%
+    float: left;
 
 .btn-list
     li
@@ -27,12 +44,19 @@ body
     input
         width: 100%
 
+.btn-list--inline
+    display: flex
+    li
+        flex-grow: 1
+        flex-basis: 0
+        padding: 0 .4rem
+
 .btn
     border: 2px solid $lightblue
     border-radius: 8px
     background: transparent
     padding: 1rem
-    font-size: 1.7rem
+    font-size: 1.3rem
 
 .btn:hover 
     border-color: $darkblue
@@ -44,3 +68,6 @@ body
 .btn--selected
     background-color: $lightblue
     color: $white
+
+.btn--end-cap
+    float: right

@@ -1,22 +1,38 @@
 include templates/header
 
-#container
+.grid-container
   h1 Perilous Tables
-  .btn-group
-    input.btn(
-        type="button"
-        value="Generate NPC"
-      )
-  .list-container
-    ul.btn-list
-      li
-        input.btn(
-          type="button"
-          value="Activity"
-        )
-      li
-        input.btn.btn--selected(
-          type="button"
-          value="Disposition"
-        )
+  #dungeon.box
+    h2 Generate Dungeon
+    .list-container
+      ul.btn-list.btn-list--inline.btn-list--radio
+        li
+          input.btn(
+            type="button"
+            value="Small"
+          )
+        li
+          input.btn.btn--selected(
+            type="button"
+            value="Medium"
+          )
+        li
+          input.btn(
+            type="button"
+            value="Large"
+          )
+        li
+          input.btn(
+            type="button"
+            value="Huge"
+          )
+        li
+          input.btn(
+            type="button"
+            value="Random"
+          )
+    input.btn.btn--end-cap(
+      type="button"
+      value="Generate"
+    )
     
