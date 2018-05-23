@@ -4,28 +4,52 @@
 $darkblue: #284B63
 $lightblue: #34A4D3
 $grey: #353535
-$lightgrey: #D9D9D9
+$lightgrey: #999999
 $white: #EEE
 
 body
     font-family: 'Roboto', sans-serif
     color: $grey
 
+h1
+    margin: .5rem
+    color: $lightgrey
+
 .grid-container 
     width: 80vw
     max-width: 90rem
     margin: 3rem auto
+    display: grid
+    grid-template-rows: 12rem
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: .7rem
 
-    h1
-        padding: 1rem 0
 
 .box 
+    position: relative
     border: 1px solid black
     border-radius: 8px
     padding: 1rem
-    h2 
-        padding-bottom: 2rem
 
+.box__header
+    
+.box__subheader
+    font-weight: normal
+    font-size: 1.3rem
+    color: $lightgrey
+
+.box__footer
+    position: absolute
+    display: block
+    left: 0
+    bottom: 0
+    padding: 1rem
+    width: 100%
+
+.box--tall
+    grid-row: span 2
+
+//clearfix
 .box:after
     content: ""
     display: table
@@ -36,7 +60,7 @@ body
 
 .list-container
     width: 60%
-    float: left;
+    float: left
 
 .btn-list
     li
@@ -71,3 +95,6 @@ body
 
 .btn--end-cap
     float: right
+
+#dungeon
+    grid-column: 1 / span 3

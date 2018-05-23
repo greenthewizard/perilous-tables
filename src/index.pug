@@ -1,38 +1,48 @@
 include templates/header
 
+h1 Perilous Tables
 .grid-container
-  h1 Perilous Tables
-  #dungeon.box
+  #dungeon.box.box--tall
     h2 Generate Dungeon
-    .list-container
-      ul.btn-list.btn-list--inline.btn-list--radio
-        li
-          input.btn(
-            type="button"
-            value="Small"
-          )
-        li
-          input.btn.btn--selected(
-            type="button"
-            value="Medium"
-          )
-        li
-          input.btn(
-            type="button"
-            value="Large"
-          )
-        li
-          input.btn(
-            type="button"
-            value="Huge"
-          )
-        li
-          input.btn(
-            type="button"
-            value="Random"
-          )
-    input.btn.btn--end-cap(
-      type="button"
-      value="Generate"
-    )
+    footer.box__footer
+      .list-container
+        ul.btn-list.btn-list--inline.btn-list--radio
+          li
+            input.btn(
+              type="button"
+              value="Small"
+            )
+          li
+            input.btn.btn--selected(
+              type="button"
+              value="Medium"
+            )
+          li
+            input.btn(
+              type="button"
+              value="Large"
+            )
+          li
+            input.btn(
+              type="button"
+              value="Huge"
+            )
+          li
+            input.btn(
+              type="button"
+              value="Random"
+            )
+      input.btn.btn--end-cap(
+        type="button"
+        value="Generate"
+      )
+  .box.box--tall
+    h2.box__header Builder
+    h3.box__subheader Who built it?
+  .box
+    h2.box__header Function
+    h3.box__subheader For what purpose was it built?
+  .box
+    h2.box__header Ruination
+    h3.box__subheader How did it come to ruin?
     
