@@ -21,7 +21,7 @@ h1
     margin: 3rem auto
     display: grid
     grid-auto-rows: 6rem
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr))
     grid-gap: .7rem
 
 
@@ -110,5 +110,5 @@ h1
     height: 4rem
 
 #dungeon
-    grid-column: span 3
+    grid-column: 1 / -1
     grid-row: span 2
