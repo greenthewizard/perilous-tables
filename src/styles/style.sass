@@ -20,7 +20,7 @@ h1
     max-width: 90rem
     margin: 3rem auto
     display: grid
-    grid-template-rows: 12rem
+    grid-auto-rows: 6rem
     grid-template-columns: repeat(3, 1fr)
     grid-gap: .7rem
 
@@ -30,6 +30,15 @@ h1
     border: 1px solid black
     border-radius: 8px
     padding: 1rem
+
+    h2
+        font-size: 2rem
+
+.box__flex-row
+    display: flex
+
+.box__flex-col--end-group
+    margin-left: auto
 
 .box__header
     
@@ -96,5 +105,10 @@ h1
 .btn--end-cap
     float: right
 
+.icon
+    width: 4rem
+    height: 4rem
+
 #dungeon
-    grid-column: 1 / span 3
+    grid-column: span 3
+    grid-row: span 2

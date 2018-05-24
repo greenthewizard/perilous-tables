@@ -2,7 +2,7 @@ include templates/header
 
 h1 Perilous Tables
 .grid-container
-  #dungeon.box.box--tall
+  #dungeon.box
     h2 Generate Dungeon
     footer.box__footer
       .list-container
@@ -36,13 +36,37 @@ h1 Perilous Tables
         type="button"
         value="Generate"
       )
-  .box.box--tall
-    h2.box__header Builder
-    h3.box__subheader Who built it?
   .box
-    h2.box__header Function
-    h3.box__subheader For what purpose was it built?
+    .box__flex-row
+      .box__flex-col
+        h2.box__header Builder
+        h3.box__subheader Who built it?
+      .box__flex-col.box__flex-col--end-group
+        input.icon(
+          type="image"
+          alt="dice"
+          src="svg/dice.svg"
+        )
   .box
-    h2.box__header Ruination
-    h3.box__subheader How did it come to ruin?
+    .box__flex-row
+      .box__flex-col
+        h2.box__header Function
+        h3.box__subheader For what purpose was it built?
+      .box__flex-col.box__flex-col--end-group
+        input.icon(
+          type="image"
+          alt="dice"
+          src="svg/dice.svg"
+        )
+  .box
+    .box__flex-row
+      .box__flex-col
+        h2.box__header Ruination
+        h3.box__subheader How did it come to ruin?  
+      .box__flex-col.box__flex-col--end-group
+        input.icon(
+          type="image"
+          alt="dice"
+          src="svg/dice.svg"
+        )
     

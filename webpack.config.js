@@ -16,7 +16,8 @@ module.exports = {
 			template: 'src/index.pug'
 		}),
 		new CopyWebpackPlugin([
-			{from: 'src/tables', to: 'tables'}
+			{from: 'src/tables', to: 'tables'},
+			{from: 'src/svg', to: 'svg'},
 		])
 	],
 	module: {
