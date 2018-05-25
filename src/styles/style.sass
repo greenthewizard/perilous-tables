@@ -5,6 +5,7 @@ $darkblue: #284B63
 $lightblue: #34A4D3
 $grey: #353535
 $lightgrey: #999999
+$lightergrey: #efefef
 $white: #EEE
 
 body
@@ -20,7 +21,7 @@ h1
     max-width: 90rem
     margin: 3rem auto
     display: grid
-    grid-auto-rows: 6rem
+    grid-auto-rows: minmax(4rem, 2fr)
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr))
     grid-gap: .7rem
 
@@ -32,20 +33,25 @@ h1
     padding: 1rem
 
     h2
-        font-size: 2rem
-
-.box__flex-row
-    display: flex
-
-.box__flex-col--end-group
-    margin-left: auto
+        font-size: 2.2rem
 
 .box__header
-    
-.box__subheader
+    display: flex
+.box__sub-title
     font-weight: normal
     font-size: 1.3rem
     color: $lightgrey
+.box__title-btn
+    margin-left: auto
+
+.box__content p
+    font-size: 2.5rem
+    color: $lightgrey
+    transition: color 200ms ease-in-out
+    padding: 0
+
+.box:hover .box__content p
+    color: $lightblue
 
 .box__footer
     position: absolute
@@ -111,4 +117,3 @@ h1
 
 #dungeon
     grid-column: 1 / -1
-    grid-row: span 2
