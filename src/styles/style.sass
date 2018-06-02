@@ -25,6 +25,17 @@ h1
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr))
     grid-gap: .7rem
 
+.l-flexbox
+    display: flex
+.l-flexitem
+    flex: 1
+.l-flexitem--shrink
+    flex: 0
+.l-flexitem--end-cap
+    flex: 0
+    margin-left: auto
+.l-flexitem--padded
+    padding: 0 .8rem 0 0
 
 .box 
     position: relative
@@ -35,23 +46,48 @@ h1
     h2
         font-size: 2.2rem
 
+    &:hover
+        .box__content
+            p
+                color: $lightblue
+    
+    //clearfix
+    &:after
+        content: ""
+        display: table
+        clear: both
 .box__header
-    display: flex
+    padding: 0 0 .5rem 0
+.box__title--highlight
+    color: $lightblue
+    margin: 0 0 0.5rem 0
 .box__sub-title
     font-weight: normal
     font-size: 1.3rem
     color: $lightgrey
-.box__title-btn
-    margin-left: auto
 
-.box__content p
-    font-size: 2.5rem
-    color: $lightgrey
-    transition: color 200ms ease-in-out
-    padding: 0
+.box__content
+    p
+        font-size: 2.5rem
+        color: $lightgrey
+        transition: color 200ms ease-in-out
+        padding: 0
+.box__content-title
+    font-weight: normal
+    font-size: 2.2rem
+    color: $grey
+    margin-bottom: 0.6rem
+.box__content-sub-title
+    font-weight: normal
+    font-size: 1.9rem
+    color: $grey
+    text-decoration: underline
+    margin-bottom: 0.4rem
 
-.box:hover .box__content p
-    color: $lightblue
+.box__result-list
+    font-size: 1.7rem
+    li
+        margin: 0.3rem 0
 
 .box__footer
     position: absolute
@@ -60,15 +96,10 @@ h1
     bottom: 0
     padding: 1rem
     width: 100%
-
 .box--tall
     grid-row: span 2
-
-//clearfix
-.box:after
-    content: ""
-    display: table
-    clear: both
+.box--full-span
+    grid-column: 1 / -1
 
 .btn-group
     padding: .4rem 0
@@ -108,12 +139,6 @@ h1
     background-color: $lightblue
     color: $white
 
-.btn--end-cap
-    float: right
-
 .icon
     width: 4rem
     height: 4rem
-
-#dungeon
-    grid-column: 1 / -1
