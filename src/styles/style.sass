@@ -19,6 +19,7 @@ h1
 .grid-container 
     width: 80vw
     max-width: 90rem
+    min-width: 45rem
     margin: 3rem auto
     display: grid
     grid-auto-rows: minmax(4rem, 2fr)
@@ -27,15 +28,10 @@ h1
 
 .l-flexbox
     display: flex
-.l-flexitem
-    flex: 1
-.l-flexitem--shrink
-    flex: 0
 .l-flexitem--end-cap
-    flex: 0
     margin-left: auto
 .l-flexitem--padded
-    padding: 0 .8rem 0 0
+    padding: 0 1.2rem 0 0
 
 .box 
     position: relative
@@ -73,6 +69,7 @@ h1
         transition: color 200ms ease-in-out
         padding: 0
 .box__content-title
+    border-bottom: 1px solid black
     font-weight: normal
     font-size: 2.2rem
     color: $grey
