@@ -2,13 +2,13 @@ include templates/header
 
 h1 Perilous Tables
 .grid-container
-  .box.box--tall.box--full-span
+  .box
     header.box__header
       .box__title-card
         .l-flexbox
           .l-flexitem
-            h2.box__title.box__title--highlight Dungeon Name
-            h3.box__sub-title Small, Ruin
+            h2.box__title.box__title--highlight Generate Dungeon
+            h3.box__sub-title Your adventure begins here..
           .l-flexitem.l-flexitem--end-cap
             .box__title-btn
               input.icon(
@@ -17,32 +17,42 @@ h1 Perilous Tables
                 src="svg/dice.svg"
               )
     .box__content
-      .l-flexbox
-        .l-flexitem.l-flexitem--shrink.l-flexitem--padded
-          h3.box__content-title Themes
-          ul.box__result-list
-            li creation/invention
-            li arcane research
-        .l-flexitem
-          h3.box__content-title Areas
-          .l-flexbox
-            .l-flexitem.l-flexitem--padded
-              h4.box__content-sub-title Common
-              ul.box__result-list
-                li creation/invention
-                li arcane research
-            .l-flexitem.l-flexitem--padded
-              h4.box__content-sub-title Unique
-              ul.box__result-list
-                li creation/invention
-                li arcane research
+      label.box__select-label
+        .l-flexbox
+          .l-flex-item Size:
+          select.box__select.l-flex-item
+            option Small
+            option Medium
+            option Large
+            option Huge
+  .box
+    header.box__header
+      .box__title-card
+        .l-flexbox
+          .l-flexitem
+            h2.box__title.box__title--highlight Generate NPC
+          .l-flexitem.l-flexitem--end-cap
+            .box__title-btn
+              input.icon(
+                type="image"
+                alt="dice"
+                src="svg/dice.svg"
+              )
+    .box__content
+      label.box__select-label
+        .l-flex-item Context:
+          select.box__select.l-flex-item
+            option Wilderness
+            option Rural
+            option Urban
+  h1.grid-section Rumors
   .box
     .box__header
       .l-flexbox
         .l-flexitem
           .box__title-card
             h2.box__title Builder
-            h3.box__sub-title Who built it?
+            h3.box__sub-title Who or what is believed to have build this place?
         .l-flexitem.l-flexitem--end-cap
           .box__title-btn
             input.icon(
@@ -81,4 +91,33 @@ h1 Perilous Tables
                 alt="dice"
                 src="svg/dice.svg"
               )
+  .box
+    .box__header
+      .l-flexbox
+          .l-flexitem
+              .box__title-card
+                h2.box__title Dangers
+                h3.box__sub-title What Dangers is it said to conceal?
+          .l-flexitem.l-flexitem--end-cap
+            .box__title-btn
+              input.icon(
+                type="image"
+                alt="dice"
+                src="svg/dice.svg"
+              )
+  .box
+    .box__header
+      .l-flexbox
+          .l-flexitem
+              .box__title-card
+                h2.box__title Discoveries
+                h3.box__sub-title What Discoveries may lie within?
+          .l-flexitem.l-flexitem--end-cap
+            .box__title-btn
+              input.icon(
+                type="image"
+                alt="dice"
+                src="svg/dice.svg"
+              )
+  h1.grid-section Exploration
     

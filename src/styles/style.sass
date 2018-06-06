@@ -22,7 +22,7 @@ h1
     min-width: 45rem
     margin: 3rem auto
     display: grid
-    grid-auto-rows: minmax(4rem, 2fr)
+    grid-auto-rows: minmax(1fr, 1fr)
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr))
     grid-gap: .7rem
 
@@ -32,6 +32,13 @@ h1
     margin-left: auto
 .l-flexitem--padded
     padding: 0 1.2rem 0 0
+
+.grid-section
+    grid-column: 1 / -1
+    font-size: 2.3rem
+    color: $lightgrey
+    border-bottom: 1px solid $lightgrey
+    padding-bottom: 0
 
 .box 
     position: relative
@@ -80,6 +87,14 @@ h1
     color: $grey
     text-decoration: underline
     margin-bottom: 0.4rem
+
+.box__select-label
+    font-size: 2rem
+.box__select
+    font-size: 2rem
+    margin: 0 0 0 1rem
+    option
+        color: $grey
 
 .box__result-list
     font-size: 1.7rem

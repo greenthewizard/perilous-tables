@@ -1,0 +1,18 @@
+.box
+    .box__header
+      .l-flexbox
+        .l-flexitem
+          .box__title-card
+            h2.box__title #{title}
+            h3.box__sub-title #{subTitle}
+        .l-flexitem.l-flexitem--end-cap
+          .box__title-btn
+            input.icon(
+              type="image"
+              alt="dice"
+              src="svg/dice.svg"
+            )
+    .box__content
+      .box__result
+        if tableResult
+            p #{tableResult}
