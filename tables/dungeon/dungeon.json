@@ -1,0 +1,43 @@
+{
+    "builder": {
+        "name": "Builder",
+        "options": [
+            "aliens/precursors",
+            "demigod/demon",
+            "natural (caves, etc)",
+            "religious order/cult",
+            "tbl:creature/humanoid[base]",
+            "dwarves/gnomes",
+            "elves",
+            "wizard/madman",
+            "monarch/warlord"
+        ]
+    },
+    "function": {
+        "name": "Function",
+        "options": [
+            "source/portal",
+            "mine",
+            "tomb/crypt",
+            "prison",
+            "lair/den/hideout",
+            "stronghold/sanctuary",
+            "shrine/temple/orace",
+            "archive/library",
+            "unknown/mystery"
+        ]
+    },
+    "ruination": {
+        "name": "Ruination",
+        "options": [
+            "arcane disaster",
+            "damnation/curse",
+            "earthquake/fire/floor",
+            "plague/famine/drought",
+            "overrun by monsters",
+            "war/invasion",
+            "deplted resources",
+            "better prospects elsewhere"
+        ]
+    }
+}

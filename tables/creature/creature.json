@@ -1,0 +1,23 @@
+{
+    "base": {
+        "name": "Creature",
+        "options": [
+            {
+                "result": "tbl:creature/beast[base]",
+                "weight": 2
+            },
+            {
+                "result": "Human",
+                "weight": 1
+            },
+            {
+                "result": "tbl:creature/humanoid[base]",
+                "weight": 1
+            },
+            {
+                "result": "tbl:creature/monster[base]",
+                "weight": 2
+            }
+        ]
+    }
+}

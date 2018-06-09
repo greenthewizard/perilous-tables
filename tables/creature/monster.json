@@ -1,0 +1,76 @@
+{
+    "base": {
+            "name": "Monster",
+            "options": [
+                {
+                    "result": "tbl:creature/monster[unusual]",
+                    "weight": 7
+                },
+                {
+                    "result": "tbl:creature/monster[rare]",
+                    "weight": 3
+                },
+                {
+                    "result": "tbl:creature/monster[legendary]",
+                    "weight": 2
+                }
+            ]
+        },
+    "unusual": {
+        "name": "Unusual Monster",
+        "options": [
+            {
+                "result": "plant/fungus",
+                "weight": 3
+            },
+            {
+                "result": "Undead Human",
+                "weight": 2
+            },
+            "Undead tbl:creature/humanoid[base]",
+            {
+                "result": "tbl:creature/beast[base] + tbl:creature/beast[base]",
+                "weight": 2
+            },
+            {
+                "result": "tbl:creature/beast[base] + tbl:detail[ability]",
+                "weight": 2
+            },
+            {
+                "result": "tbl:creature/beast[base] + tbl:detail[feature]",
+                "weight": 2
+            }
+        ]
+    },
+    "rare": {
+        "name": "Rare Monster",
+        "options": [
+            "slime/ooze",
+            "creation",
+            "tbl:creature/beast[base] + tbl:detail[oddity]",
+            "tbl:explore/danger[unnatural-entity]"
+        ]
+    },
+    "legendary": {
+        "name": "Legendary Monster",
+        "options": [
+            {
+                "result": "dragon/collossus",
+                "weight": 3
+            },
+            {
+                "result": "tbl:creature/monster[unusual] + Huge",
+                "weight": 3
+            },
+            {
+                "result": "tbl:creature/monster[rare] + Huge",
+                "weight": 3
+            },
+            "tbl:creature/beast[base] + dragon",
+            "tbl:creature/monster[unusual] + dragon",
+            "tbl:creature/monster[rare] + dragon"
+        ]
+    }
+}
+    
+    

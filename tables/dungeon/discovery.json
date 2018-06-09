@@ -1,0 +1,70 @@
+{
+    "base": {
+        "name": "Discovery",
+        "options": [
+            {
+                "result": "tbl:dungeon/discovery[dressing]",
+                "weight": 3
+            },
+            {
+                "result": "tbl:dungeon/discovery[feature]",
+                "weight": 6
+            },
+            {
+                "result": "tbl:dungeon/discovery[find]",
+                "weight": 3
+            }
+        ]
+    },
+    "dressing": {
+        "name": "Dressing",
+        "options": [
+            "junk/debris",
+            "tracks/marks",
+            "signs of battle",
+            "writing/carving",
+            "warning",
+            "dead tbl:creature/creature[base]",
+            "bones/remains",
+            "book/scroll/map",
+            "broken door/wall",
+            "breeze/wind/smell",
+            "lichen/moss/fungus",
+            "tbl:detail[oddity]"
+        ]
+    },
+    "feature": {
+        "name": "Feature",
+        "options": [
+            "cave-in/collapse",
+            "pit/shaft/chasm",
+            "pillars/columns",
+            "locked door/gate",
+            "alcoves/niches",
+            "bridge/stairs/ramp",
+            "fountain/well/pool",
+            "puzzle",
+            "altar/dais/platform",
+            "statue/idol",
+            "magic pool/statue/idol",
+            "connection to another dungeon"
+        ]
+    },
+    "find": {
+        "name": "Find",
+        "options": [
+            "trinkets",
+            "tools",
+            "weapons/armor",
+            "supplies/trade goods",
+            "coins/gems/jewelry",
+            "poisons/potions",
+            "adventurer/captive",
+            "magic item",
+            "scroll/book",
+            "magic weapon/armor",
+            "artifact",
+            "tbl:dungeon/discovery[find] + tbl:dungeon/discovery[find]"
+        ]
+    }
+}
