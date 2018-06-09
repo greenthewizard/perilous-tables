@@ -1,0 +1,23 @@
+{
+    "base": {
+        "name": "Press On Into the Unknown",
+        "options": [
+            "Unthemed, Common, empty",
+            "Unthemed, Common, Danger",
+            {
+                "result": "Unthemed, Common, Discovery + Danger",
+                "weight": 2
+            },
+            {
+                "result": "Unthemed, Common, Discovery",
+                "weight": 2
+            },
+            "Themed, Common, Danger",
+            "Themed, Common, Discover + Danger",
+            "Themed, Common, Discovery",
+            "Themed, Unique, Danger",
+            "Themed, Unique, Discovery + Danger",
+            "Themed, Unique, Discovery"
+        ]
+    }
+}

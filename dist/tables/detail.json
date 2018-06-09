@@ -1,0 +1,347 @@
+{
+    "ability": {
+        "options": [
+            "bless/curse",
+            "entangle/trap/snare",
+            "poison/trap/snare",
+            "poison/disease",
+            "paralyze/petrify",
+            "mimic/camouflage",
+            "seduce/hypnotize",
+            "dissolve/disintegrate",
+            "tbl:detail[magic type]",
+            "drain life/magic",
+            "immunity: tbl:detail[element]",
+            "read/control minds",
+            "tbl:detail[ability] + tbl:detail[ability]"
+        ]
+    },
+    "activity": {
+        "options": [
+            "laying trap/ambush",
+            "fighting/at war",
+            "prowling/on patrol",
+            "hunting/foraging",
+            "eating/resting",
+            "crafting/praying",
+            "traveling/relocating",
+            "exploring/lost",
+            "returning home",
+            "building/excavating",
+            "sleeping",
+            "dying"
+        ]
+    },
+    "adjective": {
+        "options": [
+            "slick/slimy",
+            "rough/hard/sharp",
+            "smooth/soft/dull",
+            "corroded/rusty",
+            "rotten/decaying",
+            "broken/brittle",
+            "stinking/smelly",
+            "weak/thin/drained",
+            "strong/fat/full",
+            "pale/poor/shallow",
+            "dark/rich/deep",
+            "colorful"
+        ]
+    },
+    "age": {
+        "options": [
+            "being born/built",
+            {
+                "result": "young/recent",
+                "weight": 3
+            },
+            {
+                "result": "middle-aged",
+                "weight": 3
+            },
+            {
+                "result": "old",
+                "weight": 2
+            },
+            {
+                "result": "ancient",
+                "weight": 2
+            },
+            "pre-historic"
+        ]
+    },
+    "alignment": {
+        "options": [
+            {
+                "result": "Chaotic",
+                "weight": 1
+            },
+            {
+                "result": "Evil",
+                "weight": 1
+            },
+            {
+                "result": "Neutral",
+                "weight": 2
+            },
+            {
+                "result": "Good",
+                "weight": 1
+            },
+            {
+                "result": "Lawful",
+                "weight": 1
+            }
+        ]
+    },
+    "aspect": {
+        "options": [
+            "power/strength",
+            "trickery/dexterity",
+            "time/constitution",
+            "knowledge/intelligence",
+            "nature/wisdom",
+            "culture/charisma",
+            "war/lies/discord",
+            "peace/truth/balance",
+            "hate/envy",
+            "love/admiration",
+            "tbl:detail[element]",
+            "tbl:detail[aspect] + tbl:detail[aspect]"
+        ]
+    },
+    "condition": {
+        "options": [
+            "being built/born",
+            {
+                "result": "intact/healthy/stable",
+                "weight": 3
+            },
+            {
+                "result": "occupied/active/alert",
+                "weight": 3
+            },
+            {
+                "result": "worn/tired/weak",
+                "weight": 2
+            },
+            "vacant/lost",
+            "ruined/defiled/dying",
+            "disappeared/dead"
+        ]
+    },
+    "disposition": {
+        "options": [
+            "attacking",
+            {
+                "result": "hostile/aggressive",
+                "weight": 2
+            },
+            {
+                "result": "cautious/doubtful",
+                "weight": 2
+            },
+            "fearful/fleeing",
+            {
+                "result": "neutral",
+                "weight": 2 
+            },
+            "curious/hopeful",
+            "friendly"
+        ]
+    },
+    "element": {
+        "options": [
+            "air",
+            "earth",
+            "fire",
+            "water",
+            "life",
+            "death"
+        ]
+    },
+    "feature": {
+        "options": [
+            "heavily armored",
+            {
+                "result": "winged/flying",
+                "weight": 2
+            },
+            "multiple heads/headless",
+            "many eyes/one eye",
+            "many limbs/tails",
+            "tentacles/tendrils",
+            "tbl:detail[aspect]",
+            "tbl:detail[element]",
+            "tbl:detail[magic type]",
+            "tbl:detail[oddity]",
+            "tbl:detail[feature] + tbl:detail[feature]"
+        ]
+    },
+    "magic type": {
+        "options": [
+            "divination",
+            "enchantment",
+            "evocation",
+            "illusion",
+            "necromancy",
+            "summoning"
+        ]
+    },
+    "no. appearing": {
+        "options": [
+            {
+                "result": "Solitary (1)",
+                "weight": 4
+            },
+            {
+                "result": "Group (1d6+2)",
+                "weight": 5
+            },
+            {
+                "result": "Horde (4d6 per wave)",
+                "weight": 3
+            }
+        ]
+    },
+    "oddity": {
+        "options": [
+            "weird color/smell/sound",
+            "geometric",
+            "web/network/system",
+            "crystalline/glass-like",
+            "fungal",
+            "gaseous/smokey",
+            "mirage/illusion",
+            "volcanic/explosive",
+            "magnetic/repellant",
+            "devoid of life",
+            "unexpectedly alive",
+            "tbl:detail[oddity] + tbl:details[oddity]"
+        ]
+    },
+    "orientation": {
+        "options": [
+            {
+                "result": "down/earthward",
+                "weight": 2
+            },
+            "north",
+            "northeast",
+            "east",
+            "southeast",
+            "south",
+            "southwest",
+            "west",
+            "northwest",
+            {
+                "result": "up/skyward",
+                "weight": 2 
+            }
+        ]
+    },
+    "ruination": {
+        "options": [
+            "arcane disaster",
+            "damnation/curse",
+            {
+                "result": "earthquake/fire/flood",
+                "weight": 2
+            },
+            {
+                "result": "plague/famine/drought",
+                "weight": 2
+            },
+            {
+                "result": "overrun by monsters",
+                "weight": 2
+            },
+            {
+                "result": "war/invasion",
+                "weight": 2
+            },
+            "depleted resources",
+            "better prospects elsewhere"
+        ]
+    },
+    "size": {
+        "options": [
+            "tiny",
+            {
+                "result": "small",
+                "weight": 2
+            },
+            {
+                "result": "medium-sized",
+                "weight": 6
+            },
+            {
+                "result": "large",
+                "weight": 2
+            },
+            "huge"
+        ]
+    },
+    "tag": {
+        "options": [
+            "amorphous",
+            "cautious",
+            "construct",
+            "devious",
+            "intelligent",
+            "magical",
+            {
+                "result": "organized",
+                "weight": 2
+            },
+            "planar",
+            "stealthy",
+            "terrifying",
+            "tbl:detail[tag] + tbl:detail[tag]"
+        ]
+    },
+    "terrain": {
+        "options": [
+            "wasteland/desert",
+            {
+                "result": "flatland/plain",
+                "weight": 2
+            },
+            "wetland/marsh/swamp",
+            {
+                "result": "woodland/forest/jungle",
+                "weight": 3
+            },
+            {
+                "result": "highland/hills",
+                "weight": 2
+            },
+            {
+                "result": "mountains",
+                "weight": 2
+            },
+            "tbl:detail[oddity]"
+        ]
+    },
+    "visibility": {
+        "options": [
+            {
+                "result": "buried/camouflaged/nigh invisible",
+                "weight": 2
+            },
+            {
+                "result": "partly covered/over-grown/hidden",
+                "weight": 4
+            },
+            {
+                "result": "obvious/in plain sight",
+                "weight": 3
+            },
+            {
+                "result": "visible at near distance",
+                "weight": 2
+            },
+            "visible at great distance/focal point"
+        ]
+    }
+}

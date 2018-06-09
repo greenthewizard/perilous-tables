@@ -1,0 +1,7 @@
+{
+    "base": {
+        "options": [
+            "tbl:creature/test3[base]"
+        ]
+    }
+}

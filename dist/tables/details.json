@@ -1,0 +1,113 @@
+{
+    "ability": {
+        "options": [
+            "bless/curse",
+            "entangle/trap/snare",
+            "poison/trap/snare",
+            "poison/disease",
+            "paralyze/petrify",
+            "mimic/camouflage",
+            "seduce/hypnotize",
+            "dissolve/disintegrate",
+            "tbl:details[magic type]",
+            "drain life/magic",
+            "immunity: tbl:details[element]",
+            "read/control minds",
+            "tbl:details[ability] + tbl:details[ability]"
+        ]
+    },
+    "activity": {
+        "options": [
+            "laying trap/ambush",
+            "fighting/at war",
+            "prowling/on patrol",
+            "hunting/foraging",
+            "eating/resting",
+            "crafting/praying",
+            "traveling/relocating",
+            "exploring/lost",
+            "returning home",
+            "building/excavating",
+            "sleeping",
+            "dying"
+        ]
+    },
+    "adjective": {
+        "options": [
+            "slick/slimy",
+            "rough/hard/sharp",
+            "smooth/soft/dull",
+            "corroded/rusty",
+            "rotten/decaying",
+            "broken/brittle",
+            "stinking/smelly",
+            "weak/thin/drained",
+            "strong/fat/full",
+            "pale/poor/shallow",
+            "dark/rich/deep",
+            "colorful"
+        ]
+    },
+    "age": {
+        "options": [
+            "being born/built",
+            {
+                "result": "young/recent",
+                "weight": 3
+            },
+            {
+                "result": "middle-aged",
+                "weight": 3
+            },
+            {
+                "result": "old",
+                "weight": 2
+            },
+            {
+                "result": "ancient",
+                "weight": 2
+            },
+            "pre-historic"
+        ]
+    },
+    "alignment": {
+        "options": [
+            {
+                "result": "Chaotic",
+                "weight": 1
+            },
+            {
+                "result": "Evil",
+                "weight": 1
+            },
+            {
+                "result": "Neutral",
+                "weight": 2
+            },
+            {
+                "result": "Good",
+                "weight": 1
+            },
+            {
+                "result": "Lawful",
+                "weight": 1
+            }
+        ]
+    },
+    "aspect": {
+        "options": [
+            "power/strength",
+            "trickery/dexterity",
+            "time/constitution",
+            "knowledge/intelligence",
+            "nature/wisdom",
+            "culture/charisma",
+            "war/lies/discord",
+            "peace/truth/balance",
+            "hate/envy",
+            "love/admiration",
+            "tbl:details[element]",
+            "tbl:details[aspect] + tbl:details[aspect]"
+        ]
+    }
+}

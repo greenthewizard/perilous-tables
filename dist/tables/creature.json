@@ -1,0 +1,11 @@
+{
+    "creature": {
+        "name": "Creature",
+        "options": [
+            {
+                "result": "tbl:beast[earthbound]",
+                "weight": 
+            },
+        ]
+    }
+}

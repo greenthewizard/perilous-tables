@@ -1,0 +1,70 @@
+{
+    "base": {
+        "name": "Beast",
+        "options": [
+            {
+                "result": "tbl:creature/beast[earthbound]",
+                "weight": 7
+            },
+            {
+                "result": "tbl:creature/beast[airborne]",
+                "weight": 3
+            },
+            {
+                "result": "tbl:creature/beast[watergoing]",
+                "weight": 2
+            }
+        ]
+    },
+    "earthbound": {
+        "name": "Earthbound Beast",
+        "options": [
+            "termite/tick/louse",
+            "snail/slug/worm",
+            "ant/centipede/scorpion",
+            "snake/lizard",
+            "vole/rat/weasel",
+            "boar/pig",
+            "dog/fox/wolf",
+            "cat/lion/panther",
+            "deer/horse/camel",
+            "ox/rhino",
+            "bear/ape/gorilla",
+            "mammoth/dinosaur"
+        ]
+    },
+    "airborne": {
+        "name": "Airborne Beast",
+        "options": [
+            "mosquito/firefly",
+            "locust/dragonfly/moth",
+            "bee/wasp",
+            "chicken/duck/goose",
+            "songbird/parrot",
+            "gull/waterbird",
+            "heron/crane/stork",
+            "crow/raven",
+            "hawk/falcon",
+            "eagle/owl",
+            "condor",
+            "pteranodon"
+        ]
+    },
+    "watergoing": {
+        "name": "Water-going Beast",
+        "options": [
+            "insect",
+            "jelly/anemone",
+            "clam/oyster/snail",
+            "eel/snake",
+            "frog/toad",
+            "fish",
+            "crab/lobster",
+            "turtle",
+            "alligator/crocodile",
+            "dolphin/shark",
+            "squid/octopus",
+            "whale"
+        ]
+    }
+}

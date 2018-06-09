@@ -1,0 +1,70 @@
+{
+    "base": {
+        "name": "Dungeon Theme",
+        "options": [
+            {
+                "result": "tbl:dungeon/theme[mundane]",
+                "weight": 5
+            },
+            {
+                "result": "tbl:dungeon/theme[unusual]",
+                "weight": 4
+            },
+            {
+                "result": "tbl:dungeon/theme[extraordinary]",
+                "weight": 2
+            }
+        ]
+    },
+    "mundane": {
+        "name": "Mundane",
+        "options": [
+            "rot/decay",
+            "torture/agony",
+            "madness",
+            "all is lost",
+            "noble sacrifice",
+            "savage fury",
+            "survival",
+            "criminal activity",
+            "secrets/treachery",
+            "tricks and traps",
+            "invasion/infestation",
+            "factions at war"
+        ]
+    },
+    "unusual": {
+        "name": "Unusual",
+        "options": [
+            "creation/invention",
+            "tbl:detail[element]",
+            "knowledge/learning",
+            "growth/expansion",
+            "deepening mystery",
+            "transformation/change",
+            "chaos and destruction",
+            "shadowy forces",
+            "forbidden knowledge",
+            "poison/disease",
+            "corruption/blight",
+            "impending disaster"
+        ]
+    },
+    "extraordinary": {
+        "name": "Extraordinary",
+        "options": [
+            "scheming evil",
+            "divination/scrying",
+            "blasphemy",
+            "arcane research",
+            "occult forces",
+            "an ancient curse",
+            "mutation",
+            "the unquiet dead",
+            "bottomless hunger",
+            "incredible power",
+            "unspeakable horrors",
+            "holy war"
+        ]
+    }
+}
