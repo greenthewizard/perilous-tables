@@ -1,7 +1,0 @@
-{
-    "base": {
-        "options": [
-            "tbl:creature/test2[base]"
-        ]
-    }
-}
