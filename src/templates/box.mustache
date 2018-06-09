@@ -1,0 +1,26 @@
+<div class="box">
+    <header class="box__header">
+        <div class="box__title-card">
+            <div class="l-flexbox">
+                <div class="l-flexitem">
+                    <h2 class="box__title">
+                        {{title}}
+                    </h2>
+                    <h3 class="box__sub-title">
+                        {{subTitle}}
+                    </h3>
+                </div>
+                <div class="l-flexitem l-flexitem--end-cap">
+                    <input class="icon", type="image", alt="dice", src="svg/dice.svg" />
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="box__content">
+        <div id="box__result">
+            {{#result}}
+            <p>{{result}}</p>
+            {{/result}}
+        </div>
+    </div>
+</div>

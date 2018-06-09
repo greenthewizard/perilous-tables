@@ -1,0 +1,70 @@
+{
+    "base": {
+        "name": "Danger",
+        "options": [
+            {
+                "result": "tbl:dungeon/danger[trap]",
+                "weight": 4
+            },
+            {
+                "result": "tbl:creature/creature[base] + tbl:dungeon/danger[creature]",
+                "weight": 7
+            },
+            {
+                "result": "tbl:dungeon/danger[entity]",
+                "weight": 1
+            }
+        ]
+    },
+    "trap": {
+        "name": "Trap",
+        "options": [
+            "alarm",
+            "ensnaring/paralyzing",
+            "pit",
+            "crushing",
+            "piercing/puncturing",
+            "chopping/slashing",
+            "confusing (maze, etc.)",
+            "gas (poison, etc.)",
+            "tbl:detail[element]",
+            "ambush",
+            "magical",
+            "tbl:dungeon/danger[trap] + tbl:dungeon/danger[trap]"
+        ]
+    },
+    "creature": {
+        "name": "Creature",
+        "options": [
+            "waiting in ambush",
+            "fighting/squabbling",
+            "prowing/on patrol",
+            "looking for food",
+            "eating/resting",
+            "guarding",
+            "on the move",
+            "searching/scavenging",
+            "returning to den",
+            "making plans",
+            "sleeping",
+            "dying"
+        ]
+    },
+    "entity": {
+        "name": "Entity",
+        "options": [
+            "alien interloper",
+            "vermin lord",
+            "criminal mastermind",
+            "warlord",
+            "high priest",
+            "oracle",
+            "wizard/witch/alchamist",
+            "tbl:creature/monster[base] lord",
+            "evil spirit/ghost",
+            "undead lord (lich, etc)",
+            "demon",
+            "dark god"
+        ]
+    }
+}

@@ -25,5 +25,9 @@
     "url-loader": "^1.0.1",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14"
+  },
+  "dependencies": {
+    "animate.css": "^3.6.1",
+    "mustache": "^2.3.0"
   }
 }

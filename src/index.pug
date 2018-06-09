@@ -7,118 +7,44 @@ h1 Perilous Tables
       .box__title-card
         .l-flexbox
           .l-flexitem
-            h2.box__title.box__title--highlight Generate Dungeon
-            h3.box__sub-title Plunge into the depths..
+            h2.box__title.box__title--highlight Generate
+            h3.box__sub-title 
           .l-flexitem.l-flexitem--end-cap
             .box__title-btn
               input.icon(
                 type="image"
                 alt="dice"
                 src="svg/dice.svg"
+                id="roll-btn"
               )
     .box__content
-      label.box__select-label
-        .l-flexbox
-          .l-flex-item Size:
-          select.box__select.l-flex-item
-            option Small
-            option Medium
-            option Large
-            option Huge
-  .box
-    header.box__header
-      .box__title-card
-        .l-flexbox
-          .l-flexitem
-            h2.box__title.box__title--highlight Generate NPC
-          .l-flexitem.l-flexitem--end-cap
-            .box__title-btn
-              input.icon(
-                type="image"
-                alt="dice"
-                src="svg/dice.svg"
-              )
-    .box__content
-      label.box__select-label
-        .l-flex-item Context:
-          select.box__select.l-flex-item
-            option Wilderness
-            option Rural
-            option Urban
-  h1.grid-section.grid-section--collapsed Dungeon
-  h1.grid-section Rumors
-  .box.box--tall
-    .box__header
-      .l-flexbox
-        .l-flexitem
-          .box__title-card
-            h2.box__title Builder
-            h3.box__sub-title Who or what is believed to have build this place?
-        .l-flexitem.l-flexitem--end-cap
-          .box__title-btn
-            input.icon(
-              type="image"
-              alt="dice"
-              src="svg/dice.svg"
-            )
-    .box__content
-      .box__result
-        p Dwarves
-  .box
-    .box__header
-      .l-flexbox
-          .l-flexitem
-              .box__title-card
-                h2.box__title Function
-                h3.box__sub-title For what purpose was it built?
-          .l-flexitem.l-flexitem--end-cap
-            .box__title-btn
-              input.icon(
-                type="image"
-                alt="dice"
-                src="svg/dice.svg"
-              )
-  .box
-    .box__header
-      .l-flexbox
-          .l-flexitem
-              .box__title-card
-                h2.box__title Ruination
-                h3.box__sub-title How did it come to ruin?
-          .l-flexitem.l-flexitem--end-cap
-            .box__title-btn
-              input.icon(
-                type="image"
-                alt="dice"
-                src="svg/dice.svg"
-              )
-  .box
-    .box__header
-      .l-flexbox
-          .l-flexitem
-              .box__title-card
-                h2.box__title Dangers
-                h3.box__sub-title What Dangers is it said to conceal?
-          .l-flexitem.l-flexitem--end-cap
-            .box__title-btn
-              input.icon(
-                type="image"
-                alt="dice"
-                src="svg/dice.svg"
-              )
-  .box
-    .box__header
-      .l-flexbox
-          .l-flexitem
-              .box__title-card
-                h2.box__title Discoveries
-                h3.box__sub-title What Discoveries may lie within?
-          .l-flexitem.l-flexitem--end-cap
-            .box__title-btn
-              input.icon(
-                type="image"
-                alt="dice"
-                src="svg/dice.svg"
-              )
-  h1.grid-section Exploration
+      ul.btn-list#opt-list
+        li 
+          input.btn.btn--selected(
+            type="button"
+            value="Generate Dungeon"
+            id="gen-dun"
+          )
+        li 
+          input.btn(
+            type="button"
+            value="Generate NPC"
+            id="gen-npc"
+          )
+        li 
+          input.btn(
+            type="button"
+            value="Generate Creature"
+            id="gen-cre"
+          )
+        li 
+          input.btn(
+            type="button"
+            value="Press On Into The Unknown"
+            id="gen-unk"
+          )
+  .grid-section-divider#dungeon-div
+    .l-flexbox
+      h1.l-flexitem.grid-section-divider__header Dungeon
+      
     

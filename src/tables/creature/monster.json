@@ -48,7 +48,7 @@
             "slime/ooze",
             "creation",
             "tbl:creature/beast[base] + tbl:detail[oddity]",
-            "tbl:danger[unnatrual-entity]"
+            "tbl:explore/danger[unnatural-entity]"
         ]
     },
     "legendary": {
