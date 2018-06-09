@@ -1527,7 +1527,7 @@ const resolveStringWithNames = (str) => {
     }))
     .then(newStr => {
         return tblRefRegEx.test(newStr)
-            ? resolveString(newStr) 
+            ? resolveStringWithNames(newStr) 
             : Promise.resolve(newStr);
     });
 }
