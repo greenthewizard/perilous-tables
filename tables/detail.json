@@ -1,5 +1,6 @@
 {
     "ability": {
+        "name": "Ability",
         "options": [
             "bless/curse",
             "entangle/trap/snare",
@@ -17,6 +18,7 @@
         ]
     },
     "activity": {
+        "name": "Activity",
         "options": [
             "laying trap/ambush",
             "fighting/at war",
@@ -33,6 +35,7 @@
         ]
     },
     "adjective": {
+        "name": "Adjective",
         "options": [
             "slick/slimy",
             "rough/hard/sharp",
@@ -49,6 +52,7 @@
         ]
     },
     "age": {
+        "name": "Age",
         "options": [
             "being born/built",
             {
@@ -71,6 +75,7 @@
         ]
     },
     "alignment": {
+        "name": "Alignment",
         "options": [
             {
                 "result": "Chaotic",
@@ -95,6 +100,7 @@
         ]
     },
     "aspect": {
+        "name": "Aspect",
         "options": [
             "power/strength",
             "trickery/dexterity",
@@ -111,6 +117,7 @@
         ]
     },
     "condition": {
+        "name": "Condition",
         "options": [
             "being built/born",
             {
@@ -131,6 +138,7 @@
         ]
     },
     "disposition": {
+        "name": "Disposition",
         "options": [
             "attacking",
             {
@@ -151,6 +159,7 @@
         ]
     },
     "element": {
+        "name": "Element",
         "options": [
             "air",
             "earth",
@@ -161,6 +170,7 @@
         ]
     },
     "feature": {
+        "name": "Feature",
         "options": [
             "heavily armored",
             {
@@ -179,6 +189,7 @@
         ]
     },
     "magic type": {
+        "name": "Magic Type",
         "options": [
             "divination",
             "enchantment",
@@ -189,6 +200,7 @@
         ]
     },
     "no. appearing": {
+        "name": "No. Appearing",
         "options": [
             {
                 "result": "Solitary (1)",
@@ -205,6 +217,7 @@
         ]
     },
     "oddity": {
+        "name": "Oddity",
         "options": [
             "weird color/smell/sound",
             "geometric",
@@ -221,6 +234,7 @@
         ]
     },
     "orientation": {
+        "name": "Orientation",
         "options": [
             {
                 "result": "down/earthward",
@@ -241,6 +255,7 @@
         ]
     },
     "ruination": {
+        "name": "Ruination",
         "options": [
             "arcane disaster",
             "damnation/curse",
@@ -265,6 +280,7 @@
         ]
     },
     "size": {
+        "name": "Size",
         "options": [
             "tiny",
             {
@@ -283,6 +299,7 @@
         ]
     },
     "tag": {
+        "name": "Tag",
         "options": [
             "amorphous",
             "cautious",
@@ -301,6 +318,7 @@
         ]
     },
     "terrain": {
+        "name": "Terrain",
         "options": [
             "wasteland/desert",
             {
@@ -324,6 +342,7 @@
         ]
     },
     "visibility": {
+        "name": "Visibility",
         "options": [
             {
                 "result": "buried/camouflaged/nigh invisible",

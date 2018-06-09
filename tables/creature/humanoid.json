@@ -17,7 +17,7 @@
             ]
         },
     "common": {
-        "name": "Common Humanoid",
+        "name": "Common",
         "options": [
             {
                 "result": "halfling",
@@ -43,7 +43,7 @@
         ]
     },
     "uncommon": {
-        "name": "Uncommon Humanoid",
+        "name": "Uncommon",
         "options": [
             "fey",
             {
@@ -66,7 +66,7 @@
         ]
     },
     "hybrid": {
-        "name": "Hybrid Humanoid",
+        "name": "Hybrid",
         "options": [
             {
                 "result": "centaur",

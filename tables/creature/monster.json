@@ -17,7 +17,7 @@
             ]
         },
     "unusual": {
-        "name": "Unusual Monster",
+        "name": "Unusual",
         "options": [
             {
                 "result": "plant/fungus",
@@ -43,7 +43,7 @@
         ]
     },
     "rare": {
-        "name": "Rare Monster",
+        "name": "Rare",
         "options": [
             "slime/ooze",
             "creation",
@@ -52,7 +52,7 @@
         ]
     },
     "legendary": {
-        "name": "Legendary Monster",
+        "name": "Legendary",
         "options": [
             {
                 "result": "dragon/collossus",

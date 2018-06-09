@@ -17,7 +17,7 @@
         ]
     },
     "earthbound": {
-        "name": "Earthbound Beast",
+        "name": "Earthbound",
         "options": [
             "termite/tick/louse",
             "snail/slug/worm",
@@ -34,7 +34,7 @@
         ]
     },
     "airborne": {
-        "name": "Airborne Beast",
+        "name": "Airborne",
         "options": [
             "mosquito/firefly",
             "locust/dragonfly/moth",
@@ -51,7 +51,7 @@
         ]
     },
     "watergoing": {
-        "name": "Water-going Beast",
+        "name": "Water-going",
         "options": [
             "insect",
             "jelly/anemone",
